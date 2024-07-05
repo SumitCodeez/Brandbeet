@@ -75,11 +75,19 @@ function navAnim() {
 navAnim();
 
 function scrollAnimation() {
+  var startTrigger = "50% 50%";
+  var endTrigger = "220% 50%";
+
+  if (window.innerWidth <= 600) {
+    startTrigger = "top top";
+    endTrigger = "bottom top";
+  }
+
   var tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#page-1",
-      start: "50% 50%",
-      end: "220% 50%",
+      start: startTrigger,
+      end: endTrigger,
       scrub: true,
       pin: true,
     },
