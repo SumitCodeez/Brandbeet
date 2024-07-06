@@ -201,146 +201,72 @@ function revealingAnimation() {
 revealingAnimation();
 
 function rightpinAnimation() {
+  var isMobile = window.matchMedia("(max-width: 600px)").matches;
+  var startTrigger = "50% 50%";
+  var endTrigger = "200% 50%";
+
+  if (window.innerWidth <= 600) {
+    startTrigger = "0% 0%";
+    endTrigger = "1000% 50%";
+  }
+
   var tl4 = gsap.timeline({
     scrollTrigger: {
       trigger: "#page-4",
-      start: "50% 50%",
-      end: "200% 50%",
+      start: startTrigger,
+      end: endTrigger,
       scrub: true,
       pin: true,
     },
   });
-  tl4.to(
-    ".c-one",
-    {
-      marginTop: "-25%",
-      opacity: 1,
-    },
-    "one"
-  );
-  tl4.to(
-    ".c-two",
-    {
-      opacity: 1,
-    },
-    "two"
-  );
-  tl4.to(
-    ".c-one",
-    {
-      opacity: 0,
-      marginTop: "-100%",
-    },
-    "two"
-  );
-  tl4.to(
-    ".c-three",
-    {
-      opacity: 1,
-    },
-    "three"
-  );
-  tl4.to(
-    ".c-two",
-    {
-      opacity: 0,
-    },
-    "three"
-  );
-  tl4.to(
-    ".c-one",
-    {
-      marginTop: "-180%",
-    },
-    "three"
-  );
-  tl4.to(
-    ".c-four",
-    {
-      opacity: 1,
-    },
-    "four"
-  );
-  tl4.to(
-    ".c-three",
-    {
-      opacity: 0,
-    },
-    "four"
-  );
-  tl4.to(
-    ".c-one",
-    {
-      marginTop: "-240%",
-    },
-    "four"
-  );
-  tl4.to(
-    ".c-five",
-    {
-      opacity: 1,
-    },
-    "five"
-  );
-  tl4.to(
-    ".c-four",
-    {
-      opacity: 0,
-    },
-    "five"
-  );
-  tl4.to(
-    ".c-one",
-    {
-      marginTop: "-300%",
-    },
-    "five"
-  );
-  tl4.to(
-    ".c-six",
-    {
-      opacity: 1,
-    },
-    "six"
-  );
-  tl4.to(
-    ".c-five",
-    {
-      opacity: 0,
-    },
-    "six"
-  );
-  tl4.to(
-    ".c-one",
-    {
-      marginTop: "-390%",
-    },
-    "six"
-  );
-  tl4.to(
-    ".c-one",
-    {
-      marginTop: "-440%",
-    },
-    "seven"
-  );
-  tl4.to(
-    ".c-six",
-    {
-      opacity: 0,
-    },
-    "seven"
-  );
-  tl4.to(
-    ".circle-div",
-    {
-      marginLeft: "88%",
-      rotate: 360,
-      ease: "Power4inOut",
-    },
-    "seven"
-  );
+
+  if (isMobile) {
+    tl4
+      .to(".c-one", { marginTop: "15%", opacity: 1 }, "one")
+      .to(".c-two", { opacity: 1 }, "two")
+      .to(".c-one", { opacity: 0, marginTop: "-180%" }, "two")
+      .to(".c-three", { opacity: 1 }, "three")
+      .to(".c-two", { opacity: 0 }, "three")
+      .to(".c-one", { marginTop: "-230%" }, "three")
+      .to(".c-four", { opacity: 1 }, "four")
+      .to(".c-three", { opacity: 0 }, "four")
+      .to(".c-one", { marginTop: "-320%" }, "four")
+      .to(".c-five", { opacity: 1 }, "five")
+      .to(".c-four", { opacity: 0 }, "five")
+      .to(".c-one", { marginTop: "-390%" }, "five")
+      .to(".c-six", { opacity: 1 }, "six")
+      .to(".c-five", { opacity: 0 }, "six")
+      .to(".c-one", { marginTop: "-550%" }, "six")
+      .to(".c-one", { marginTop: "-620%" }, "seven")
+      .to(".c-six", { opacity: 0 }, "seven")
+      .to(".circle-div", { rotate: 360 }, "seven");
+  } else {
+    tl4
+      .to(".c-one", { marginTop: "-25%", opacity: 1 }, "one")
+      .to(".c-two", { opacity: 1 }, "two")
+      .to(".c-one", { opacity: 0, marginTop: "-100%" }, "two")
+      .to(".c-three", { opacity: 1 }, "three")
+      .to(".c-two", { opacity: 0 }, "three")
+      .to(".c-one", { marginTop: "-180%" }, "three")
+      .to(".c-four", { opacity: 1 }, "four")
+      .to(".c-three", { opacity: 0 }, "four")
+      .to(".c-one", { marginTop: "-240%" }, "four")
+      .to(".c-five", { opacity: 1 }, "five")
+      .to(".c-four", { opacity: 0 }, "five")
+      .to(".c-one", { marginTop: "-300%" }, "five")
+      .to(".c-six", { opacity: 1 }, "six")
+      .to(".c-five", { opacity: 0 }, "six")
+      .to(".c-one", { marginTop: "-350%" }, "six")
+      .to(".c-one", { marginTop: "-400%" }, "seven")
+      .to(".c-six", { opacity: 0 }, "seven")
+      .to(
+        ".circle-div",
+        { marginLeft: "88%", rotate: 360, ease: "Power4.inOut" },
+        "seven"
+      );
+  }
 }
+
 rightpinAnimation();
 
 function imgRotate() {
