@@ -760,7 +760,6 @@ body::-webkit-scrollbar {
   #loader {
     height: 100vh;
     width: 100vw;
-    display: none;
   }
   #loader h1 {
     font-size: 6vw;
@@ -903,7 +902,7 @@ body::-webkit-scrollbar {
     background-color: #000000;
     color: #ffffff;
   }
-  .first-btn .head-1{
+  .first-btn .head-1 {
     font-size: 4vw;
     font-weight: 500;
   }
@@ -911,7 +910,7 @@ body::-webkit-scrollbar {
     background-color: #e0e0e0;
     color: #000000;
   }
-  .second-btn .head-1{
+  .second-btn .head-1 {
     font-size: 4vw;
     font-weight: 500;
   }
@@ -924,78 +923,11 @@ body::-webkit-scrollbar {
     justify-content: space-around;
     padding: 0vw 2vw;
   }
-  #page-3 .btm-page-3 img{
+  #page-3 .btm-page-3 img {
     width: 14vw;
     height: 8vw;
     object-fit: contain;
   }
-  /* #page-4 {
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #page-4 .left-part-4 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  #page-4 .left-part-4 h1 {
-    font-size: 9.6vw;
-    font-weight: 500;
-    letter-spacing: 0.01rem;
-    padding-top: 275vh;
-    white-space: nowrap;
-
-  }
-  #page-4 .left-part-4 .circle-div {
-    width: 11vw;
-    height: 11vw;
-    border-radius: 50%;
-    background-color: #e0dfdf;
-    display: flex;
-    margin-top: 5vw;
-    padding: 7vw;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1vw;
-  }
-  #page-4 .left-part-4 .circle-div img{
-    width: 6vw;
-    height: 6vw;
-    object-fit: cover;
-  }
-  #page-4 .right-part-4 {
-    width: 100%;
-    height: 200%;
-    display: flex;
-    flex-direction: column;
-    gap: 30vh;
-    margin-top: 180%;
-    padding-left: 8vw;
-  }
-  #page-4 .right-part-4 .content-right-4 {
-    display: flex;
-    flex-direction: column;
-    gap: 5vh;
-    opacity: 0;
-  }
-  #page-4 .right-part-4 .content-right-4 h1 {
-    font-size: 5.5vw;
-    font-weight: 500;
-    letter-spacing: 0.02rem;
-  }
-  #page-4 .right-part-4 .content-right-4 p {
-    width: 100%;
-    font-size: 5.5vw;
-    font-weight: 500;
-    opacity: 0.8;
-  } */
   #page-4 {
     width: 100%;
     height: 100vh;
@@ -1042,6 +974,7 @@ body::-webkit-scrollbar {
     margin-top: 60vh;
     position: absolute;
     left: 0;
+    z-index: 999;
   }
   #page-4 .right-part-4 .content-right-4 {
     display: flex;
@@ -1053,11 +986,76 @@ body::-webkit-scrollbar {
     font-size: 5.5vw;
     font-weight: 500;
     letter-spacing: 0.02rem;
-  }  
+  }
   #page-4 .right-part-4 .content-right-4 p {
     width: 100%;
     font-size: 5.5vw;
     font-weight: 500;
     opacity: 0.8;
+  }
+  #page-5 {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+  }
+  #page-5 h1 {
+    font-weight: 600;
+    opacity: 0.5;
+  }
+  #page-5 #text-content-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 22vh;
+    position: absolute;
+    margin-left: 30.2vw;
+    opacity: 0.2;
+    width: 100%;
+    white-space: nowrap;
+  }
+  #page-5 #text-content-over-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 22vh;
+    position: absolute;
+    margin-right: 4.9vw;
+  }
+  #page-5 h2 {
+    font-size: 7.8vw;
+    font-weight: 500;
+    letter-spacing: -0.5rem;
+  }
+  #page-5 #text-content-over-1 .left-6 {
+    text-wrap: nowrap;
+    overflow: hidden;
+    width: 0%;
+  }
+  #page-5 #text-content-1 .right-5 {
+    margin-left: 10vw;
+  }
+  #page-5 #text-content-over-1 .right-6 {
+    text-wrap: nowrap;
+    overflow: hidden;
+    width: 0%;
+    margin-left: 10vw;
+  }
+  .box-div {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    top: 100%;
+    display: flex;
+  }
+  .box-div .inner-div {
+    width: 150%;
+    height: 180%;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    transform: translate(-50%);
   }
 }
