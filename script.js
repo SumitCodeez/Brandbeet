@@ -5,7 +5,6 @@ function loadingAnimation() {
   h1.forEach(function (elem) {
     tl.from(elem, {
       opacity: 0,
-      // duration: 0.6,
     });
     tl.to(elem, {
       opacity: 0,
@@ -13,9 +12,9 @@ function loadingAnimation() {
     });
   });
   tl.to("#loader", {
-    y: -1000,
+    y: -1480,
     ease: "Power4.inOut",
-    duration: 1,
+    duration: 1.2,
   });
 }
 loadingAnimation();
@@ -207,7 +206,7 @@ function rightpinAnimation() {
 
   if (window.innerWidth <= 600) {
     startTrigger = "0% 0%";
-    endTrigger = "1000% 50%";
+    endTrigger = "400% 50%";
   }
 
   var tl4 = gsap.timeline({
@@ -237,9 +236,17 @@ function rightpinAnimation() {
       .to(".c-six", { opacity: 1 }, "six")
       .to(".c-five", { opacity: 0 }, "six")
       .to(".c-one", { marginTop: "-550%" }, "six")
-      .to(".c-one", { marginTop: "-620%" }, "seven")
+      .to(".c-one", { marginTop: "-660%" }, "seven")
       .to(".c-six", { opacity: 0 }, "seven")
-      .to(".circle-div", { rotate: 360 }, "seven");
+      .to(
+        ".circle-div",
+        {
+          rotate: "360",
+          ease: "Power4.inOut",
+          marginLeft: "40%",
+        },
+        "eight"
+      );
   } else {
     tl4
       .to(".c-one", { marginTop: "-25%", opacity: 1 }, "one")
@@ -396,6 +403,48 @@ function workAnimation() {
   );
   tl9.to(".center-scroll-div img", {
     y: -2490,
+  });
+
+  ScrollTrigger.matchMedia({
+    "(max-width: 600px)": function () {
+      tl9.to(".demo", {
+        top: "90%",
+      });
+      tl9.to(
+        "#page-8 .up",
+        {
+          top: "21%",
+          left: "13%",
+        },
+        "s+=0.01"
+      );
+      tl9.to(
+        "#page-8 .low",
+        {
+          top: "71%",
+          left: "61%",
+        },
+        "s+=0.01"
+      );
+    },
+    "(min-width: 600px) and (max-width: 1024px)": function () {
+      tl9.to(
+        "#page8 .up",
+        {
+          top: "20%",
+          left: "5%",
+        },
+        "s+=0.01"
+      );
+      tl9.to(
+        "#page8 .low",
+        {
+          top: "68%",
+          left: "61%",
+        },
+        "s+=0.01"
+      );
+    },
   });
 }
 workAnimation();
