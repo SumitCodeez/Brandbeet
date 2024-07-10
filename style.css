@@ -1178,6 +1178,7 @@ body::-webkit-scrollbar {
     transform: translate(-50%);
     padding: 4.5vw;
     border-radius: 120px;
+    color: #fff;
   }
   #page-9 {
     width: 100%;
