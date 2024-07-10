@@ -1,8 +1,12 @@
+@font-face {
+  font-family: BasicFont;
+  src: url(./assets/fonts/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter";
+  font-family: BasicFont;
 }
 html,
 body {
@@ -703,7 +707,7 @@ body::-webkit-scrollbar {
 }
 #page-9-bottom .row h2 {
   font-size: 1vw;
-  font-family: 400;
+  font-weight: 400;
   opacity: 0.4;
   width: 18%;
 }
@@ -1279,7 +1283,7 @@ body::-webkit-scrollbar {
   }
   #page-9-bottom .row h2 {
     font-size: 5vw;
-    font-family: 400;
+    font-weight: 400;
     opacity: 0.4;
     width: 100%;
   }
