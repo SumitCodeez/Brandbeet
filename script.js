@@ -507,12 +507,11 @@ buttonAnimation();
 
 function buttonAnimation2() {
   let heading1 = document.querySelectorAll(".hover");
-  let firsth1 = document.querySelectorAll(".firsth1");
-  let secondh1 = document.querySelectorAll(".secondh1");
 
-  heading1.forEach(function (e, index) {
-    let currentFirstH1 = firsth1[index];
-    let currentSecondH1 = secondh1[index];
+  heading1.forEach(function (e) {
+    let currentFirstH1 = e.querySelector(".firsth1");
+    let currentSecondH1 = e.querySelector(".secondh1");
+
     e.addEventListener("mouseenter", function () {
       gsap.to(currentFirstH1, {
         y: -140,
